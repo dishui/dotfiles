@@ -70,10 +70,10 @@ _ruby_version() {
 }
 
 print_pre_prompt() {
-  printf "\e[1;30m%$(($COLUMNS))s" $(_ruby_version)
+  printf "\e[1;33m%$(($COLUMNS))s" $(_ruby_version)
 }
 
-# PROMPT_COMMAND=print_pre_prompt
+PROMPT_COMMAND=print_pre_prompt
 PS1="$(command_state)"
 # PS1+="$BLUE_BG\w$CLEAR"
 PS1+="\[\e[38;5;0m\]\[\e[46m\] \w $CLEAR"
